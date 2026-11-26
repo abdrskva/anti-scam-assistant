@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Anti-Scam Assistant",
+  "version": "0.1.0",
+  "host_permissions": ["https://lalafo.kg/*", "http://127.0.0.1:8000/*"],
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://lalafo.kg/*",
+        "http://localhost:63342/*",
+        "http://localhost:8080/*"
+      ],
+      "js": ["content.js"]
+    }
+  ]
+}
